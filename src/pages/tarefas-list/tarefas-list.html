@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <ion-navbar color='primary'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Minhas Tarefas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list [virtualScroll]="tarefas">
+      <button ion-item *virtualItem="let tarefa">  
+        <tarefa-list-item [tarefa]="tarefa"></tarefa-list-item>      
+      </button>
+    </ion-list>
+</ion-content>
+
+
+<ion-fab bottom right>
+  <button ion-fab color="primary">
+    <ion-icon name='add'></ion-icon> 
+  </button>
+</ion-fab>
